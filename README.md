@@ -1,5 +1,8 @@
 # AlgoPath Explorer is an interactive React web app that visually demonstrates and compares four key pathfinding algorithms: BFS, DFS, Dijkstra's, and A*. Users can create custom grids with walls and watch as the algorithms find a path in real time.
 
+![Uploading Screenshot 2025-08-22 183447.png…]()
+
+
 ## 🚀 About the Project
 
 Welcome to **AlgoPath Explorer**! This project is an interactive web application built with **React** that visually demonstrates the behavior of four popular pathfinding algorithms: Breadth-First Search (**BFS**), Depth-First Search (**DFS**), **Dijkstra's Algorithm**, and **A\* Search**.
@@ -88,5 +91,6 @@ This command creates an optimized `build` folder ready for deployment.
 ## 🤝 Contributing
 
 This project is open for contributions! If you have suggestions for new features, bug fixes, or improvements, feel free to open an issue or create a pull request.
+
 
 
