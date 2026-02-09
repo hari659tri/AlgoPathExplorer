@@ -35,6 +35,67 @@ Dijkstra's algorithm is designed to find the shortest path from a starting node 
 ### **A\* Search**
 A\* is a more advanced version of Dijkstra's, optimized for finding the shortest path to a *single* destination. It uses a "heuristic" (a smart guess) to estimate the distance to the goal, allowing it to more intelligently prioritize which paths to explore. This makes it significantly more efficient and is considered the industry standard for pathfinding in games and navigation systems.
 
+# Challenges Faced and How You Solved Them
+## Challenge 1: Drag and Drop Start/Finish Node
+
+Problem: User should be able to move start and finish nodes.
+
+Solution:
+
+Used mouse events (onMouseDown, onMouseEnter, onMouseUp) to track which node is being dragged.
+
+Set flags in state (isStartNode, isFinishNode) to know what is being moved.
+
+Update node’s position in the grid dynamically while dragging.
+
+Key React Concept Used: setState() to update grid and node properties in real-time.
+
+How to say in interview:
+
+“I used React state and mouse event handlers to implement drag-and-drop functionality for start and finish nodes. Flags in state tracked which node was being moved, and the grid updated dynamically during dragging.”
+
+## Challenge 2: Clearing Visited Nodes / Resetting Grid
+
+Problem: After running an algorithm, all visited nodes and the shortest path should reset on clicking Clear.
+
+Solution:
+
+clearGrid() function loops over all nodes and:
+
+Sets isVisited = false
+
+Resets distance = Infinity
+
+Resets previousNode = null
+
+Keeps start/finish/wall intact.
+
+clearWalls() clears walls separately.
+
+Key React Concept Used: Updating grid state with setState() ensures UI reflects changes immediately.
+
+How to say in interview:
+
+“I implemented functions to clear visited nodes and shortest paths using React state. The grid is reset without losing walls or start/finish nodes.”
+
+## Challenge 3: Fixed Grid Size
+
+Problem: Initially grid size was fixed (25×35 for desktop, 10×20 for mobile). Wanted a fully dynamic grid but couldn’t implement completely.
+
+Partial Solution:
+
+Used a switch between desktop and mobile view to make grid somewhat responsive.
+
+React state stored row/column count, which updates grid when view changes.
+
+Lesson Learned: Dynamic grid requires handling window resize events, recalculating node positions, and possibly CSS scaling.
+
+How to say in interview:
+
+“I implemented desktop/mobile view switching to adjust grid size. Full dynamic resizing is a future enhancement. React state helped update the grid when switching views.”
+
+
+
 ## 🏃 Getting Started
 
 To run this project locally, follow these steps.
@@ -91,6 +152,7 @@ This command creates an optimized `build` folder ready for deployment.
 ## 🤝 Contributing
 
 This project is open for contributions! If you have suggestions for new features, bug fixes, or improvements, feel free to open an issue or create a pull request.
+
 
 
 
